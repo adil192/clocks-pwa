@@ -16,10 +16,6 @@ clock {
 	height: 10rem;
 	border-radius: 50%;
 
-	&.focus {
-		background: #eeeeee;
-	}
-
 	&::after, &::before {
 		content: "";
 		position: absolute;
@@ -43,6 +39,14 @@ clock {
 	@for $m from 0 to 59 {
 		&.minute-#{$m}::after {
 			transform: rotate(calc(360deg / 60 * #{$m}));
+		}
+	}
+
+	&.focus {
+		background: #eeeeee;
+
+		&::after, &::before {
+			filter: brightness(0);
 		}
 	}
 }

@@ -16,6 +16,9 @@ include_once "../global_tools.php";
 
 <div id="clock-container">
 <?php
+$minute_current = date("i");
+$hour_current = date("h");
+
 $minute = -1;
 $hour = 0;
 for ($i = 1; $i <= 720; ++$i) {
@@ -24,8 +27,10 @@ for ($i = 1; $i <= 720; ++$i) {
         $minute = 0;
         $hour += 1;
     }
+
+    $focus = ($minute == $minute_current and $hour == $hour_current) ? "focus": "";
 ?>
-    <clock id="clock<?=$i?>" class="minute-<?=$minute?> hour-<?=$hour?>"></clock>
+    <clock id="clock<?=$i?>" class="minute-<?=$minute?> hour-<?=$hour?> <?=$focus?>"></clock>
 <?php } ?>
 </div>
 
