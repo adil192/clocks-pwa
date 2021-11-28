@@ -1,0 +1,30 @@
+html, body {
+	background: #333333;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	color: #eeeeee;
+}
+
+clock {
+	display: block;
+	position: relative;
+	background: #8A888A;
+	width: 10rem;
+	height: 10rem;
+	border-radius: 50%;
+
+	&.focus {
+		background: #eeeeee;
+	}
+
+	&::after, &::before {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+	}
+}
