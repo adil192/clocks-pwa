@@ -13,12 +13,19 @@ include_once "../global_tools.php";
 
     <link rel="stylesheet" href="assets/style.css">
 </head>
-<body>
-<h1>Hello, world!</h1>
 
 <div id="clock-container">
-<?php for ($i = 1; $i <= 720; ++$i) { ?>
-    <clock id="clock<?=$i?>"></clock>
+<?php
+$minute = -1;
+$hour = 0;
+for ($i = 1; $i <= 720; ++$i) {
+    $minute += 1;
+    if ($minute >= 60) {
+        $minute = 0;
+        $hour += 1;
+    }
+?>
+    <clock id="clock<?=$i?>" class="minute-<?=$minute?> hour-<?=$hour?>"></clock>
 <?php } ?>
 </div>
 

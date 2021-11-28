@@ -28,6 +28,23 @@ clock {
 		top: 0;
 		left: 0;
 	}
+	&::before {
+		background-image: url("images/hand-hrs.svg");
+	}
+	&::after {
+		background-image: url("images/hand-mins.svg");
+	}
+
+	@for $h from 0 to 11 {
+		&.hour-#{$h}::before {
+			transform: rotate(calc(360deg / 12 * #{$h}));
+		}
+	}
+	@for $m from 0 to 59 {
+		&.minute-#{$m}::after {
+			transform: rotate(calc(360deg / 60 * #{$m}));
+		}
+	}
 }
 
 #clock-container {
@@ -35,6 +52,7 @@ clock {
 	grid-template-columns: repeat(auto-fill, 5rem);
 	grid-template-rows: repeat(auto-fit, 10rem);
 	grid-gap: 1rem;
+	padding: 2rem;
 	grid-template-areas:
 		"c678 c678 c546 c546 c236 c236 c245 c245 c172 c172 c420 c420 c438 c438 c484 c484 c720 c720 c88 c88 . "
 		". c133 c133 c248 c248 c25 c25 c564 c564 c691 c691 c537 c537 c539 c539 c584 c584 c207 c207 c448 c448 "
