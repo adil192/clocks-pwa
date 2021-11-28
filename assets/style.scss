@@ -31,12 +31,12 @@ clock {
 		background-image: url("images/hand-mins.svg");
 	}
 
-	@for $h from 0 to 11 {
+	@for $h from 0 to 12 {
 		&.hour-#{$h}::before {
 			transform: rotate(calc(360deg / 12 * #{$h}));
 		}
 	}
-	@for $m from 0 to 59 {
+	@for $m from 0 to 60 {
 		&.minute-#{$m}::after {
 			transform: rotate(calc(360deg / 60 * #{$m}));
 		}
