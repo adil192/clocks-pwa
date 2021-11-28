@@ -15,11 +15,7 @@ function scrollToCurrentTime() {
 	clock_container.querySelector("clock.focus").classList.remove("focus");
 	clock_current.classList.add("focus");
 
-	let x = clock_current.offsetLeft + clock_current.scrollWidth / 2 - window.innerWidth / 2;
-	let y = clock_current.offsetTop + clock_current.scrollHeight / 2 - window.innerHeight / 2;
-	console.log("x", x, "y", y);
-
-	window.scrollTo(x, y);
+	clock_current.scrollIntoView({behavior: "smooth", block: "center", inline: "center"});
 }
 
 setInterval(scrollToCurrentTime, 1000);
