@@ -12,7 +12,10 @@ function scrollToCurrentTime() {
 
 	let clock_current = clock_container.querySelector(".minute-"+minute_current+".hour-"+hour_current);
 
-	clock_container.querySelector("clock.focus").classList.remove("focus");
+	let currently_focused = clock_container.querySelector("clock.focus");
+	if (currently_focused != null) {
+		currently_focused.classList.remove("focus");
+	}
 	clock_current.classList.add("focus");
 
 	clock_current.scrollIntoView({behavior: "smooth", block: "center", inline: "center"});
