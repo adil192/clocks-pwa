@@ -11,9 +11,8 @@ function findNewCurrentTime() {
 	if (minute_current == minute_scrolled) return;
 	minute_scrolled = minute_current;
 
-	if (clock_current != null) {
+	if (clock_current != null)
 		clock_current.classList.remove("focus");
-	}
 
 	clock_current = clock_container.querySelector(".minute-"+minute_current+".hour-"+hour_current);
 	clock_current.classList.add("focus");
@@ -21,7 +20,8 @@ function findNewCurrentTime() {
 }
 
 function scrollToCurrentTime() {
-	clock_current.scrollIntoView({behavior: "smooth", block: "center", inline: "center"});
+	if (clock_current != null)
+		clock_current.scrollIntoView({behavior: "smooth", block: "center", inline: "center"});
 }
 
 setInterval(findNewCurrentTime, 1000);
