@@ -27,3 +27,5 @@ function scrollToCurrentTime() {
 setInterval(findNewCurrentTime, 1000);
 
 window.addEventListener("resize", scrollToCurrentTime);
+
+window.addEventListener("focus", scrollToCurrentTime);
