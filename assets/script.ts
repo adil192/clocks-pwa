@@ -26,6 +26,6 @@ function scrollToCurrentTime() {
 
 setInterval(findNewCurrentTime, 1000);
 
-window.addEventListener("resize", scrollToCurrentTime);
+window.addEventListener("resize", scrollToCurrentTime, {passive: true});
 
-window.addEventListener("focus", scrollToCurrentTime);
+window.addEventListener("focus", scrollToCurrentTime, {passive: true});
