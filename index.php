@@ -6,9 +6,10 @@ include_once "../global_tools.php";
 <head>
 	<?php
 	createHead(
-		$title="Clocks",
-		$desc="A broken clock is right twice a day.",
-		$image="https://adil.hanney.org/clocks/clocks.png"
+		"Clocks",
+		"A broken clock is right twice a day.",
+		"https://adil.hanney.org/clocks/clocks.png",
+        null
 	);
 	?>
 
