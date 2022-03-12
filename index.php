@@ -9,7 +9,9 @@ include_once "../global_tools.php";
 		"Clocks",
 		"A broken clock is right twice a day.",
 		"https://adil.hanney.org/clocks/clocks.png",
-        null
+        null,
+        "2021-01-24",
+        "Image"
 	);
 	?>
 
