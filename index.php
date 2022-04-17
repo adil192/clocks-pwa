@@ -39,7 +39,7 @@ for ($i = 1; $i <= 720; ++$i) {
 <?php } ?>
 </div>
 
-<script src="../assets/ext/popper.2.11.5.min.js"></script>
+<script src="/assets/ext/popper.2.11.5.min.js"></script>
 <script src="assets/script.js"></script>
 </body>
 </html>
