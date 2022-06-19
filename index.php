@@ -7,7 +7,7 @@ include_once "../global_tools.php";
 	<?php
 	createHead(
 		"Clocks",
-		"A broken clock is right twice a day.",
+		"A broken clock is right twice a day: this page contains every analogue clock face.",
 		"https://adil.hanney.org/clocks/clocks.png",
         null,
         "2021-01-24",
@@ -16,6 +16,10 @@ include_once "../global_tools.php";
 	?>
 
     <link rel="stylesheet" href="assets/style.css">
+
+    <link rel="manifest" href="clocks.webmanifest">
+    <meta name="theme-color" content="#8A888A"/>
+    <link rel="apple-touch-icon" href="/maskable_icon_x192.png">
 </head>
 <body>
 
