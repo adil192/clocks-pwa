@@ -35,7 +35,7 @@ for ($i = 1; $i <= 720; ++$i) {
 
     $focus = ($minute == $minute_current and $hour == $hour_current) ? "focus": "";
 ?>
-    <clock id="clock<?=$i?>" class="minute-<?=$minute?> hour-<?=$hour?> <?=$focus?>"></clock>
+    <clock id="clock<?=$i?>" class="minute-<?=$minute?> hour-<?=$hour?> <?=$focus?>" aria-label="<?=$hour?>:<?=$minute?>"></clock>
 <?php } ?>
 </div>
 
